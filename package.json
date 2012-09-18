@@ -9,7 +9,7 @@
       "express": "2.5.11",
       "ejs": ">=0.6.1",
       "connect-cachify": "0.0.10",
-      "node-font-face-generator": ">=0.0.2"
+      "connect-fonts": ">=0.0.1"
   },
   "devDependencies": {
     "awsbox": "0.2.14",

@@ -9,7 +9,7 @@ const express = require("express")
       fs = require("fs"),
       cachify = require('connect-cachify'),
       config = require("../config/config").config,
-      fontServer = require("../lib/font-middleware");
+      fontServer = require("connect-fonts");
 
 const IP_ADDRESS=config.ip_address;
 const PORT=config.port;
