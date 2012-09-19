@@ -50,7 +50,8 @@ app.configure(function(){
 
   app.use(fontServer.setup({
     fonts: getRegisteredFonts(),
-    languageToLocations: getLanguageToLocations()
+    language_to_locations: getLanguageToLocations(),
+    url_modifier: cachify.cachify
   }));
 
   app.use(express.static(staticRoot));
