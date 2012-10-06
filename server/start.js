@@ -35,12 +35,6 @@ function getLanguageToLocations() {
 app.configure(function(){
   app.use(app.router);
 
-  app.use(function(req, res, next) {
-    res.on('header', function() {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-    });
-    next();
-  });
 
   app.use(cachify.setup({}, {
     prefix: "v",
@@ -53,6 +47,11 @@ app.configure(function(){
     language_to_locations: getLanguageToLocations(),
     url_modifier: cachify.cachify
   }));
+
+  app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
   app.use(express.static(staticRoot));
 });
