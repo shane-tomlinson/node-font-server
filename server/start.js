@@ -8,7 +8,7 @@ const express = require("express")
       app = express.createServer(),
       fs = require("fs"),
       cachify = require('connect-cachify'),
-      config = require("../config/config").config,
+      config = require("../lib/config"),
       fontServer = require("connect-fonts");
 
 const IP_ADDRESS=config.ip_address;
