@@ -8,5 +8,6 @@ const util = require('../lib/util'),
 extend(exports, {
   url: env['URL'] || "fontserver.yourdomain.org",
   use_minified_resources: parseBool(env['MINIFIED'] || true),
-  https: env['HTTPS'] || true
+  https: parseBool(env['HTTPS'] || true),
+  'access-control-allow-origin': env['ACCESS_CONTROL_ALLOW_ORIGIN'] || '*'
 });

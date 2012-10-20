@@ -49,7 +49,9 @@ app.configure(function(){
   }));
 
   app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    if (/\.woff$/.test(req.url))
+      res.setHeader('Access-Control-Allow-Origin', config['access-control-allow-origin']);
+
     next();
   });
 

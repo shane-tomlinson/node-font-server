@@ -1,6 +1,6 @@
 # node-font-server
 
-A simple font server with the ability to serve distinct locale specific fonts.
+A simple font server with the ability to serve browser/locale specific fonts.
 
 ## Installation
 1. clone the repo - `git clone`
@@ -28,6 +28,7 @@ Environment variables that can be specified:
 * URL
 * MINIFIED
 * HTTPS
+* ACCESS_CONTROL_ALLOW_ORIGIN
 
 ## Requesting font CSS
 Requests for CSS should be in the form of:
